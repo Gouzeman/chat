@@ -66,7 +66,7 @@ class AuthController extends Controller
             return redirect()->route('conversations.index');
         }
 
-        // Если данные неверные — возвращаем назад с ошибкой.
+        // Если данные неверные - возвращаем назад с ошибкой.
         // withErrors() кладёт ошибку в $errors в шаблоне.
         return back()->withErrors([
             'email' => 'Неверный email или пароль.',

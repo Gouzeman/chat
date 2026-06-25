@@ -29,7 +29,7 @@
                 @else
                     <a href="{{ $fileUrl }}" target="_blank"
                        class="flex items-center gap-1 mt-1 text-sm underline {{ $isMine ? 'text-blue-200' : 'text-blue-600' }}">
-                        📎 {{ $msg->file_name ?? 'Скачать файл' }}
+                         {{ $msg->file_name ?? 'Скачать файл' }}
                     </a>
                 @endif
             @endif

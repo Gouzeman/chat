@@ -25,7 +25,7 @@ class ConversationController extends Controller
     // Открыть конкретный диалог
     public function show(Conversation $conversation)
     {
-        // Проверяем что текущий пользователь — участник диалога
+        // Проверяем что текущий пользователь - участник диалога
         if (!$conversation->users->contains(Auth::id())) {
             abort(403, 'Вы не участник этого диалога.');
         }
@@ -65,7 +65,7 @@ class ConversationController extends Controller
         $users = User::where('id', '!=', Auth::id())
             ->where(function ($q) use ($query) {
                 $q->where('name', 'like', "%{$query}%")
-                    ->orWhere('email', 'like', "%{$query}%");
+                  ->orWhere('email', 'like', "%{$query}%");
             })
             ->limit(10)
             ->get(['id', 'name', 'email']);

@@ -95,7 +95,7 @@
             btn.disabled = true;
             btn.textContent = '...';
 
-            // FormData — позволяет отправить файл и текст одним запросом
+            // FormData - позволяет отправить файл и текст одним запросом
             const formData = new FormData();
             if (body) formData.append('body', body);
             if (file) formData.append('file', file);
@@ -223,7 +223,7 @@
             }
         });
 
-        // Защита от XSS — экранируем HTML в пользовательском тексте
+        // Защита от XSS - экранируем HTML в пользовательском тексте
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.appendChild(document.createTextNode(text));

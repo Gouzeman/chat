@@ -30,7 +30,7 @@ class MessageController extends Controller
         $fileName = null;
         $fileType = null;
 
-        // Если есть файл — сохраняем в storage/app/public/messages/
+        // Если есть файл - сохраняем в storage/app/public/messages/
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filePath = $file->store('messages', 'public');

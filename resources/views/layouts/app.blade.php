@@ -9,7 +9,7 @@
 </head>
 <body class="bg-[#efefef] min-h-screen flex flex-col">
 
-{{-- Шапка — показываем только залогиненным --}}
+{{-- Шапка - показываем только залогиненным --}}
 @auth
     <nav class="bg-white border-b border-[#0000001a]">
         <div class="mx-auto max-w-[1200px] px-4 py-3 flex items-center justify-between">

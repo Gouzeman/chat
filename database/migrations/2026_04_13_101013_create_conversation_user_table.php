@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('conversation_id')
                 ->constrained()          // ссылается на conversations.id
-                ->cascadeOnDelete();     // удаляем диалог — удаляем и записи здесь
+                ->cascadeOnDelete();     // удаляем диалог - удаляем и записи здесь
             $table->foreignId('user_id')
                 ->constrained()
                 ->cascadeOnDelete();

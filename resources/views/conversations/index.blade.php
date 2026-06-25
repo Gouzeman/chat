@@ -52,7 +52,7 @@
                                     @if($conv->latestMessage->user_id === Auth::id())
                                         <span class="text-gray-400">Вы: </span>
                                     @endif
-                                    {{ $conv->latestMessage->body ?? '📎 Файл' }}
+                                    {{ $conv->latestMessage->body ?? 'Файл' }}
                                 </p>
                             @endif
                         </div>
@@ -111,7 +111,7 @@
         });
 
         // ========================================
-        // POLLING — обновление списка диалогов
+        // Обновление списка диалогов
         // ========================================
 
         // Собираем id диалогов которые уже есть на странице
@@ -129,13 +129,13 @@
                     const existing = document.querySelector(`[data-conversation-id="${conv.id}"]`);
 
                     if (existing) {
-                        // Диалог уже есть — обновляем превью
+                        // Диалог уже есть - обновляем превью
                         const preview = existing.querySelector('.conv-preview');
                         const time = existing.querySelector('.conv-time');
                         if (preview) preview.textContent = (conv.is_mine ? 'Вы: ' : '') + conv.last_body;
                         if (time) time.textContent = conv.last_time;
                     } else {
-                        // Новый диалог — добавляем в начало списка
+                        // Новый диалог - добавляем в начало списка
                         const list = document.getElementById('conversations-list');
                         const div = document.createElement('a');
                         div.href = `/conversations/${conv.id}`;

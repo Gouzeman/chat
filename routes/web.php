@@ -6,7 +6,7 @@ use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 // ========================================
-// AUTH — только для незалогиненных
+// AUTH - только для незалогиненных
 // ========================================
 
 Route::middleware('guest')->group(function () {
@@ -19,7 +19,7 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // ========================================
-// ЧАТ — только для залогиненных
+// ЧАТ - только для залогиненных
 // ========================================
 
 Route::middleware('auth')->group(function () {
